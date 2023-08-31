@@ -11,7 +11,7 @@ const {
 const client = new Client({
     contactPoints: [SCYLLA_HOST],
     localDataCenter:'datacenter1',
-    keyspace: 'tableflow',
+    keyspace: 'users',
     pooling: {
       coreConnectionsPerHost: {
         [distance.local]: 2,

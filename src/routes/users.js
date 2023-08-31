@@ -7,7 +7,7 @@ const router = Router();
 router.route('/').get(async function(req, res, next) {
 
   try {
-    const query = 'SELECT * FROM tableflow.import_rows limit 100'; // Replace with your keyspace and table
+    const query = 'SELECT * FROM users.import_rows limit 100'; // Replace with your keyspace and table
     const result = await client.execute(query);
     res.json(result.rows);
   } catch (err) {
