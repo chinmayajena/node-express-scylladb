@@ -1,0 +1,39 @@
+{
+  "name": "node-express-scylladb",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "start": "node ./bin/www",
+    "start:dev": "nodemon --ignore dist/ --ignore test/ --exec babel-node ./src/bin/www.js"
+  },
+  "dependencies": {
+    "cassandra-driver": "^4.6.4",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^16.3.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.10",
+    "@babel/core": "^7.22.11",
+    "@babel/node": "^7.22.10",
+    "@babel/preset-env": "^7.22.14",
+    "@babel/register": "^7.22.5",
+    "babel-plugin-module-resolver": "^5.0.0",
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": "16",
+    "npm": "8"
+  },
+  "nodemonConfig": {
+    "events": {
+      "start": "echo '--------------------\n'& clear || cls"
+    }
+  }
+}
