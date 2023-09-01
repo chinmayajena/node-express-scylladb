@@ -3,7 +3,6 @@ import 'dotenv/config';
 
 import logger from 'morgan';
 import express from 'express';
-import path from 'path'
 import createError from 'http-errors';
 import cookieParser from 'cookie-parser';
 import * as configs from '@/config';
@@ -11,11 +10,6 @@ import cors from 'cors';
  
 
 var app = express();
-
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
